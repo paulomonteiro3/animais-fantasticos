@@ -1,4 +1,4 @@
-import outsideClick from "./outside-click.js";
+import outsideClick from "./outsideclick.js";
 
 export default class DropdownMenu {
   constructor(dropdownMenus, events) {
@@ -31,7 +31,7 @@ export default class DropdownMenu {
     const element = event.currentTarget;
     element.classList.add(this.activeClass);
     outsideClick(element, this.events, () => {
-      element.remove("active");
+      element.classList.remove("active");
     });
   }
 
